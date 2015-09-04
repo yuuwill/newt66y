@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+   <key>items</key>
+   <array>
+       <dict>
+           <key>assets</key>
+           <array>
+               <dict>
+                   <key>kind</key>
+                   <string>software-package</string>
+                   <key>url</key>
+                   <string>http://www.rmdown.com/a.ipa</string>
+               </dict>
+           </array>
+       </dict>
+   </array>
+</dict>
+
+	<key>appleId</key>
+	<string>Widow@iphonecake.com</string>
+	<key>artistId</key>
+	<integer>331879616</integer>
+	<key>artistName</key>
+	<string>ALSEDI Group</string>
+	<key>bundleDisplayName</key>
+	<string>abcNotes</string>
+	<key>bundleShortVersionString</key>
+	<string>8.2</string>
+	<key>bundleVersion</key>
+	<string>8.2.3534</string>
+	<key>copyright</key>
+	<string>ALSEDI Group</string>
+	<key>drmVersionNumber</key>
+	<integer>0</integer>
+	<key>fileExtension</key>
+	<string>.app</string>
+	<key>genre</key>
+	<string>Productivity</string>
+	<key>genreId</key>
+	<integer>6007</integer>
+	<key>itemId</key>
+	<integer>354015291</integer>
+	<key>itemName</key>
+	<string>abc Notes - ToDo, Checklist &amp; Sticky Note Application</string>
+	<key>kind</key>
+	<string>software</string>
+	<key>playlistArtistName</key>
+	<string>ALSEDI Group</string>
+	<key>playlistName</key>
+	<string>abc Notes - ToDo, Checklist &amp; Sticky Note Application</string>
+	<key>product-type</key>
+	<string>ios-app</string>
+	<key>purchaseDate</key>
+	<date>2009-08-26T19:12:18Z</date>
+	<key>rating</key>
+	<dict>
+		<key>content</key>
+		<string>Advisory.NO.GAMBLING_CONTESTS and Advisory.NO.UNRESTRICTED_WEB_ACCESS</string>
+		<key>label</key>
+		<string>4+</string>
+		<key>rank</key>
+		<integer>100</integer>
+		<key>system</key>
+		<string>itunes-games</string>
+	</dict>
+	<key>releaseDate</key>
+	<string>2010-04-01T20:47:59Z</string>
+	<key>s</key>
+	<integer>143444</integer>
+	<key>softwareIcon57x57URL</key>
+	<string>http://a1944.phobos.apple.com/eu/r30/Purple3/v4/dc/4f/ba/dc4fba77-1f43-4c8f-d19c-44887379fc36/AppIcon60x60_U00402x.png</string>
+	<key>softwareIconNeedsShine</key>
+	<false/>
+	<key>softwareSupportedDeviceIds</key>
+	<array>
+		<integer>9</integer>
+		<integer>2</integer>
+		<integer>4</integer>
+	</array>
+	<key>softwareVersionBundleId</key>
+	<string>com.alsedi.abcNotes</string>
+	<key>softwareVersionExternalIdentifier</key>
+	<integer>811601102</integer>
+	<key>softwareVersionExternalIdentifiers</key>
+	<array>
+		<integer>2503383</integer>
+		<integer>2534514</integer>
+		<integer>2572153</integer>
+		<integer>2629804</integer>
+		<integer>2685054</integer>
+		<integer>2706402</integer>
+		<integer>2739645</integer>
+		<integer>2827037</integer>
+		<integer>3031590</integer>
+		<integer>3076606</integer>
+		<integer>3126141</integer>
+		<integer>3185052</integer>
+		<integer>3270968</integer>
+		<integer>3341305</integer>
+		<integer>3424477</integer>
+		<integer>3488143</integer>
+		<integer>3558562</integer>
+		<integer>3681541</integer>
+		<integer>3714611</integer>
+		<integer>3831229</integer>
+		<integer>3949104</integer>
+		<integer>4042822</integer>
+		<integer>4130272</integer>
+		<integer>4158381</integer>
+		<integer>4363165</integer>
+		<integer>6087171</integer>
+		<integer>6355458</integer>
+		<integer>7662148</integer>
+		<integer>8086142</integer>
+		<integer>9516244</integer>
+		<integer>10385863</integer>
+		<integer>11172675</integer>
+		<integer>11895980</integer>
+		<integer>12944268</integer>
+		<integer>14500111</integer>
+		<integer>15274990</integer>
+		<integer>15422919</integer>
+		<integer>15486380</integer>
+		<integer>23802658</integer>
+		<integer>49582649</integer>
+		<integer>615482643</integer>
+		<integer>663022678</integer>
+		<integer>685702741</integer>
+		<integer>811125984</integer>
+		<integer>811457083</integer>
+		<integer>811601102</integer>
+	</array>
+	<key>storeCohort</key>
+	<string>3|date=1309123800000&amp;sf=143444</string>
+	<key>userName</key>
+	<string></string>
+	<key>vendorId</key>
+	<integer>297605</integer>
+	<key>versionRestrictions</key>
+	<integer>16843008</integer>
+</dict>
+</plist>
