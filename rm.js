@@ -71,6 +71,7 @@ function CopyToClipboard(containerid) {
 		document.execCommand("copy");
 	}
 }
+
 $( document ).ready(function() {
 	$("li:eq(1)").css('display', 'none');
 	$("img:eq(1)").on("error", function(){
