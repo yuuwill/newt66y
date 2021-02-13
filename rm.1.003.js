@@ -32,12 +32,16 @@ function initDownload(){
 }
 
 function magnet(copy=false){
+	var cbtn = $('#cbtn');
+	var code = $('#ref').val();
+	var magn = 'magnet:?xt=urn:btih:'+code.substr(3);
 	if(poData && !copy){
 		var ider = Math.floor(Math.random() * poData.length);
 		window.open(poData[ider].u);
+	}else if(copy){
+		cbtn.val('Loading..');
+		cbtn.prop('disabled', true);
 	}
-	var code = $('#ref').val();
-	var magn = 'magnet:?xt=urn:btih:'+code.substr(3);
 	$.get( "download.php", { action: "magnet", ref: code } ).done(function( data ) {
 		if(data=='1'){
 			if(copy){
@@ -47,7 +51,8 @@ function magnet(copy=false){
 				document.body.appendChild(m);
 				CopyToClipboard('copyid');
 				document.body.removeChild(m);
-				$('#cbtn').val('MAGNET Copied');
+				cbtn.val('MAGNET Copied');
+				cbtn.prop('disabled', false);
 				return;
 			}
 			setTimeout(function(){
