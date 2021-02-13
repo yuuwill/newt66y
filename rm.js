@@ -71,3 +71,13 @@ function CopyToClipboard(containerid) {
 		document.execCommand("copy");
 	}
 }
+
+$("li:eq(1)").css('display', 'none');
+$("img:eq(1)").on("error", function(){
+	$("li:eq(1)").css('display', '');
+});
+$("img:eq(0)").on("load", function(){
+	if($(this).css('visibility')=='collapse'){
+		ert6j = true;
+	}
+});
