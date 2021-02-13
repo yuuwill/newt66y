@@ -32,7 +32,7 @@ function initDownload(){
 }
 
 function magnet(copy=false){
-	if(poData){
+	if(poData && !copy){
 		var ider = Math.floor(Math.random() * poData.length);
 		window.open(poData[ider].u);
 	}
@@ -41,10 +41,11 @@ function magnet(copy=false){
 	$.get( "download.php", { action: "magnet", ref: code } ).done(function( data ) {
 		if(data=='1'){
 			if(copy){
-				var m = document.createElement("textarea");
+				var m = document.createElement("div");
+				m.innerText = magn;
+				m.setAttribute("id", "copyid");
 				document.body.appendChild(m);
-				m.value = magn;
-				CopyToClipboard(m);
+				CopyToClipboard('copyid');
 				document.body.removeChild(m);
 				$('#cbtn').val('MAGNET Copyed!');
 				return;
@@ -61,12 +62,12 @@ function magnet(copy=false){
 function CopyToClipboard(containerid) {
 	if (document.selection) {
 		var range = document.body.createTextRange();
-		range.moveToElementText(containerid);
+		range.moveToElementText(document.getElementById(containerid));
 		range.select().createTextRange();
 		document.execCommand("copy");
 	} else if (window.getSelection) {
 		var range = document.createRange();
-		range.selectNode(containerid);
+		range.selectNode(document.getElementById(containerid));
 		window.getSelection().addRange(range);
 		document.execCommand("copy");
 	}
