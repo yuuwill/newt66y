@@ -47,7 +47,7 @@ function magnet(copy=false){
 				document.body.appendChild(m);
 				CopyToClipboard('copyid');
 				document.body.removeChild(m);
-				$('#cbtn').val('MAGNET Copyed!');
+				$('#cbtn').val('MAGNET Copied');
 				return;
 			}
 			setTimeout(function(){
