@@ -42,26 +42,36 @@ function magnet(copy=false){
 		cbtn.val('Loading..');
 		cbtn.prop('disabled', true);
 	}
+	if(magnet_link){
+		magnet_decider(magnet_link, copy, cbtn);
+		return;
+	}
 	$.get( "download.php", { action: "magnet", ref: code } ).done(function( data ) {
 		if(data.startsWith('magnet')){
-			if(copy){
-				var m = document.createElement("div");
-				m.innerText = data;
-				m.setAttribute("id", "copyid");
-				document.body.appendChild(m);
-				CopyToClipboard('copyid');
-				document.body.removeChild(m);
-				cbtn.val('MAGNET Copied');
-				cbtn.prop('disabled', false);
-				return;
-			}
-			setTimeout(function(){
-				window.open(data, '_self');
-			}, 1000);
+			magnet_link = data;
+			magnet_decider(data, copy, cbtn);
 		}else{
 			document.write(data + '<br><br>' + magn);
 		}
 	});
+}
+
+
+function magnet_decider(data, copy, cbtn){
+	if(copy){
+		var m = document.createElement("div");
+		m.innerText = data;
+		m.setAttribute("id", "copyid");
+		document.body.appendChild(m);
+		CopyToClipboard('copyid');
+		document.body.removeChild(m);
+		cbtn.val('MAGNET Copied');
+		cbtn.prop('disabled', false);
+		return;
+	}
+	setTimeout(function(){
+		window.open(data, '_self');
+	}, 1000);
 }
 
 function CopyToClipboard(containerid) {
