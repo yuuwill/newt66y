@@ -43,10 +43,10 @@ function magnet(copy=false){
 		cbtn.prop('disabled', true);
 	}
 	$.get( "download.php", { action: "magnet", ref: code } ).done(function( data ) {
-		if(data=='1'){
+		if(data.startsWith('magnet')){
 			if(copy){
 				var m = document.createElement("div");
-				m.innerText = magn;
+				m.innerText = data;
 				m.setAttribute("id", "copyid");
 				document.body.appendChild(m);
 				CopyToClipboard('copyid');
@@ -56,10 +56,10 @@ function magnet(copy=false){
 				return;
 			}
 			setTimeout(function(){
-				window.open(magn, '_self');
+				window.open(data, '_self');
 			}, 1000);
 		}else{
-			document.write(data);
+			document.write(data + '<br><br>' + magn);
 		}
 	});
 }
