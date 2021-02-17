@@ -56,15 +56,13 @@ function magnet(copy=false){
 	});
 }
 
-
 function magnet_decider(data, copy, cbtn){
 	if(copy){
-		var m = document.createElement("div");
-		m.innerText = data;
-		m.setAttribute("id", "copyid");
-		document.body.appendChild(m);
+		var m = $('<div></div>', {id:"copyid"});
+		m.html(data);
+		cbtn.parent().append(m);
 		CopyToClipboard('copyid');
-		document.body.removeChild(m);
+		m.remove();
 		cbtn.val('MAGNET Copied');
 		cbtn.prop('disabled', false);
 		return;
