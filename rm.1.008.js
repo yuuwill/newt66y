@@ -65,6 +65,7 @@ function magnet_decider(data, copy, cbtn){
 		m.remove();
 		cbtn.val('MAGNET Copied');
 		cbtn.prop('disabled', false);
+		cbtn.focus();
 		return;
 	}
 	setTimeout(function(){
