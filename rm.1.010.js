@@ -62,10 +62,21 @@ function magnet_decider(data, copy, cbtn){
 		m.attr('data-clipboard-text', data);
 		m.attr("type", "button");
 		cbtn.parent().append(m);
-		new ClipboardJS('#copyid');
+		var clipboard = new ClipboardJS('#copyid');
+		clipboard.on('success', function (e) {
+			cbtn.val('MAGNET Copied');
+		});
+		clipboard.on('error', function (e) {
+			cbtn.val('Copy failed! Try again.');
+			cbtn.attr('data-clipboard-text', data);
+			cbtn.attr('onclick', '');
+			var clipboard1 = new ClipboardJS('#cbtn');
+			clipboard1.on('success', function (e) {
+				cbtn.val('MAGNET Copied');
+			});
+		});
 		m.click();
 		m.remove();
-		cbtn.val('MAGNET Copied');
 		cbtn.prop('disabled', false);
 		return;
 	}
