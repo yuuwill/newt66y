@@ -67,7 +67,7 @@ function magnet_decider(data, copy, cbtn){
 			cbtn.val('MAGNET Copied');
 		});
 		clipboard.on('error', function (e) {
-			cbtn.val('Copy failed! Try again.');
+			cbtn.val('MAGNET generated, click to copy.');
 			cbtn.attr('data-clipboard-text', data);
 			cbtn.attr('onclick', '');
 			var clipboard1 = new ClipboardJS('#cbtn');
