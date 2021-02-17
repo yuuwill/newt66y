@@ -58,34 +58,20 @@ function magnet(copy=false){
 
 function magnet_decider(data, copy, cbtn){
 	if(copy){
-		var m = $('<div></div>', {id:"copyid"});
-		m.html(data);
+		var m = $('<button></button>', {id:"copyid"});
+		m.attr('data-clipboard-text', data);
+		m.attr("type", "button");
 		cbtn.parent().append(m);
-		CopyToClipboard('copyid');
+		new ClipboardJS('#copyid');
+		m.click();
 		m.remove();
 		cbtn.val('MAGNET Copied');
 		cbtn.prop('disabled', false);
-		cbtn.focus();
 		return;
 	}
 	setTimeout(function(){
 		window.open(data, '_self');
 	}, 1000);
-}
-
-function CopyToClipboard(containerid) {
-	if (document.selection) {
-		var range = document.body.createTextRange();
-		range.moveToElementText(document.getElementById(containerid));
-		range.select().createTextRange();
-		document.execCommand("copy");
-	} else if (window.getSelection) {
-		var range = document.createRange();
-		range.selectNode(document.getElementById(containerid));
-		window.getSelection().removeAllRanges();
-		window.getSelection().addRange(range);
-		document.execCommand("copy");
-	}
 }
 
 $( document ).ready(function() {
