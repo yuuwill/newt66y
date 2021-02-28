@@ -65,6 +65,7 @@ function magnet_decider(data, copy, cbtn){
 		var clipboard = new ClipboardJS('#copyid');
 		clipboard.on('success', function (e) {
 			cbtn.val('MAGNET Copied');
+			setTimeout(() => cbtn.val('COPY'), 3000);
 		});
 		clipboard.on('error', function (e) {
 			cbtn.val('MAGNET generated, click to copy.');
@@ -73,6 +74,7 @@ function magnet_decider(data, copy, cbtn){
 			var clipboard1 = new ClipboardJS('#cbtn');
 			clipboard1.on('success', function (e) {
 				cbtn.val('MAGNET Copied');
+				setTimeout(() => cbtn.val('COPY'), 3000);
 			});
 		});
 		m.click();
