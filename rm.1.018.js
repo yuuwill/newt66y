@@ -47,7 +47,7 @@ function magnet(copy){
 		return;
 	}
 	$.get( "download.php", { action: "magnet", ref: code } ).done(function( data ) {
-		if(data.startsWith('magnet')){
+		if(data.indexOf('magnet')==0){
 			magnet_link = data;
 			magnet_decider(data, copy, cbtn);
 		}else{
