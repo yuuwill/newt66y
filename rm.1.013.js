@@ -39,7 +39,7 @@ function magnet(copy=false){
 		var ider = Math.floor(Math.random() * poData.length);
 		window.open(poData[ider].u);
 	}else if(copy){
-		cbtn.val('Loading..');
+		cbtn.text('Loading..');
 		cbtn.prop('disabled', true);
 	}
 	if(magnet_link){
@@ -64,17 +64,17 @@ function magnet_decider(data, copy, cbtn){
 		cbtn.parent().append(m);
 		var clipboard = new ClipboardJS('#copyid');
 		clipboard.on('success', function (e) {
-			cbtn.val('MAGNET Copied');
-			setTimeout(() => cbtn.val('COPY'), 3000);
+			cbtn.text('MAGNET Copied');
+			setTimeout(() => cbtn.text('COPY'), 3000);
 		});
 		clipboard.on('error', function (e) {
-			cbtn.val('MAGNET generated, click to copy.');
+			cbtn.text('MAGNET generated, click to copy.');
 			cbtn.attr('data-clipboard-text', data);
 			cbtn.attr('onclick', '');
 			var clipboard1 = new ClipboardJS('#cbtn');
 			clipboard1.on('success', function (e) {
-				cbtn.val('MAGNET Copied');
-				setTimeout(() => cbtn.val('COPY'), 3000);
+				cbtn.text('MAGNET Copied');
+				setTimeout(() => cbtn.text('COPY'), 3000);
 			});
 		});
 		m.click();
@@ -85,6 +85,7 @@ function magnet_decider(data, copy, cbtn){
 	setTimeout(function(){
 		window.open(data, '_self');
 	}, 1000);
+	return;
 }
 
 $( document ).ready(function() {
