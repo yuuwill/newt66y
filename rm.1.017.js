@@ -65,7 +65,7 @@ function magnet_decider(data, copy, cbtn){
 		var clipboard = new ClipboardJS('#copyid');
 		clipboard.on('success', function (e) {
 			cbtn.html('MAGNET Copied');
-			setTimeout(() => cbtn.html('<i class="fa fa-magnet"></i> COPY'), 3000);
+			setTimeout(function(){ cbtn.html('<i class="fa fa-magnet"></i> COPY'); }, 3000);
 		});
 		clipboard.on('error', function (e) {
 			cbtn.html('MAGNET generated, click to copy.');
@@ -74,7 +74,7 @@ function magnet_decider(data, copy, cbtn){
 			var clipboard1 = new ClipboardJS('#cbtn');
 			clipboard1.on('success', function (e) {
 				cbtn.html('MAGNET Copied');
-				setTimeout(() => cbtn.html('<i class="fa fa-magnet"></i> COPY'), 3000);
+				setTimeout(function(){ cbtn.html('<i class="fa fa-magnet"></i> COPY'); }, 3000);
 			});
 		});
 		m.click();
