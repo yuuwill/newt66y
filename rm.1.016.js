@@ -31,7 +31,7 @@ function initDownload(){
 	}
 }
 
-function magnet(copy=false){
+function magnet(copy){
 	var cbtn = $('#cbtn');
 	var code = $('#ref').val();
 	var magn = 'magnet:?xt=urn:btih:'+code.substr(3);
