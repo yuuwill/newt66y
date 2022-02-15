@@ -1,16 +1,16 @@
 function dpos(form){
 	var imgs = document.getElementsByTagName('img');
 	if(imgs[0].height==0){
-		alert('请关闭广告屏蔽插件（如ADBLOCK）再尝试下载');
-		return false;
+		//alert('请关闭广告屏蔽插件（如ADBLOCK）再尝试下载');
+		//return false;
 	}
 	if(ert6j){
-		alert('请关闭广告屏蔽插件（如uBlock）再尝试下载');
-		return false;
+		//alert('请关闭广告屏蔽插件（如uBlock）再尝试下载');
+		//return false;
 	}
 	if($("img:eq(0)").css('visibility')=='collapse'){
-		alert('请关闭广告屏蔽插件（如uBlock）再尝试下载');
-		return false;
+		//alert('请关闭广告屏蔽插件（如uBlock）再尝试下载');
+		//return false;
 	}
 	if(poData){
 		var ider = Math.floor(Math.random() * poData.length);
